@@ -194,3 +194,9 @@ footer {
         font-size: 0.9em;
     }
 }
+p{
+    text-align:justify;
+}
+h3{
+    text-align: left;
+}
