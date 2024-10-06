@@ -6,8 +6,8 @@
     <title>Ultra Cleaning Southland Ltd</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,9 +21,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li> 
                         <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
@@ -32,33 +33,76 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Welcome Message -->
-    <section id="hero" class="text-center text-white">
+    <!-- Hero Section with CSS-based Slideshow -->
+    <section id="hero">
+        <div class="slideshow-container">
+            <img src="./Assests/HRO/0371-H3124743-99635686__1721250209-17031-33KakarikiWay-15.jpg" alt="Cleaning Service 1">
+            <img src="./Assests/HRO/2459-H3124743-99635668__1721250185-6903-33KakarikiWay-13.jpg" alt="Cleaning Service 2">
+            <img src="./Assests/HRO/27a9-H3124743-99635936__1721250280-6971-33KakarikiWay-23.jpg" alt="Cleaning Service 3">
+            <img src="./Assests/HRO/56ac-H3124743-99635691__1721250219-16793-33KakarikiWay-16.jpg" alt="Cleaning Service 4">
+            <img src="./Assests/HRO/9573-H3124743-99636096__1721250327-17027-33KakarikiWay-27.jpg" alt="Cleaning Service 5">
+            <img src="./Assests/HRO/edf6-H3124743-99635676__1721250196-6873-33KakarikiWay-14.jpg" alt="Cleaning Service 6">
+        </div>
+
         <div class="hero-content">
             <h1>Welcome to Ultra Cleaning Southland Ltd</h1>
             <p>Your satisfaction is our priority. We offer professional and reliable cleaning services for businesses and homes.</p>
-            <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+            <!-- Trigger the modal with this button -->
+            <a href="#quoteModal" class="btn btn-primary" data-bs-toggle="modal">Get a Free Quote</a>
         </div>
     </section>
+
+    <!-- Modal for Get a Free Quote Form -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quoteModalLabel">Get a Free Quote</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Formspree form -->
+            <form id="quoteForm" action="https://formspree.io/f/{your-form-id}" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Preferred Cleaning Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+              </div>
+              <div class="mb-3">
+                <label for="service" class="form-label">What kind of cleaning service do you want?</label>
+                <select class="form-select" id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Commercial Cleaning">Commercial Cleaning</option>
+                  <option value="Domestic Cleaning">Domestic Cleaning</option>
+                  <option value="Residential Cleaning">Residential Cleaning</option>
+                  <option value="Window Cleaning">Window Cleaning</option>
+                  <option value="Carpet Cleaning">Carpet Cleaning</option>
+                  <option value="Building Wash">Building Wash</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="text-center bg-dark text-white py-3">
         <p>Contact Us: admin@ultraclean.co.nz | Phone: 027 349 6614</p>
         <p>&copy; 2024 Ultra Cleaning Southland Ltd</p>
     </footer>
 
-    <script>
-        // Smooth Scroll Animation for Navbar Links
-        $(document).ready(function(){
-            $('a').on('click', function(event){
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800);
-                }
-            });
-        });
-    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
