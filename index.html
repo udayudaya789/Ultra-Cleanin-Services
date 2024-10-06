@@ -143,11 +143,11 @@
     <!-- Custom JavaScript -->
     <script type="text/javascript">
       (function() {
-        emailjs.init('YOUR_USER_ID');  // Replace 'YOUR_USER_ID' with your actual User ID from EmailJS
+        emailjs.init('KzkCYieu-kziUs-v_'); 
       })();
 
       function showSummary() {
-        // Collect form data
+        
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
         const email = document.getElementById('email').value;
@@ -155,7 +155,7 @@
         const postcode = document.getElementById('postcode').value;
         const service = document.getElementById('service').value;
 
-        // Display the data in the summary modal
+        
         document.getElementById('summaryName').innerText = name;
         document.getElementById('summaryPhone').innerText = phone;
         document.getElementById('summaryEmail').innerText = email;
@@ -163,12 +163,12 @@
         document.getElementById('summaryPostcode').innerText = postcode;
         document.getElementById('summaryService').innerText = service;
 
-        // Show the summary modal
+        
         new bootstrap.Modal(document.getElementById('summaryModal')).show();
       }
 
       function editForm() {
-        // Hide summary and go back to the form
+        
         new bootstrap.Modal(document.getElementById('quoteModal')).show();
       }
 
@@ -182,10 +182,10 @@
           service: document.getElementById('service').value
         };
 
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+        emailjs.send("service_53suqkq","template_g574p8j")
           .then(function(response) {
             alert('Your inquiry has been sent successfully!');
-            document.getElementById('quoteForm').reset();  // Clear the form
+            document.getElementById('quoteForm').reset();  
           }, function(error) {
             alert('Failed to send the email. Please try again.');
           });
