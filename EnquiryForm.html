@@ -3,137 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Quote - Ultra Cleaning Southland Ltd</title>
+    <title>Contact Form - Ultra Cleaning Southland Ltd</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .hidden { display: none; }
-    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Get a Free Quote</h2>
-       
-        <form id="quoteForm" class="mb-3">
+    <div class="container">
+        <h2 class="mt-5 mb-4">Request a Free Quote</h2>
+        <form id="form" class="mb-4">
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="from_name" class="form-label">Your Name</label>
+                <input type="text" name="from_name" id="from_name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="to_name" class="form-label">Company Name</label>
+                <input type="text" name="to_name" id="to_name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="name" id="name" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
+                <input type="tel" name="phone" id="phone" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" name="email" id="email" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" name="address" required>
+                <input type="text" name="address" id="address" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" class="form-control" id="postcode" name="postcode" required>
+                <input type="text" name="postcode" id="postcode" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="service" class="form-label">Service Needed</label>
-                <select class="form-select" id="service" name="service" required>
-                    <option value="">Select a service</option>
-                    <option value="Commercial Cleaning">Commercial Cleaning</option>
-                    <option value="Domestic Cleaning">Domestic Cleaning</option>
-                    <option value="Residential Cleaning">Residential Cleaning</option>
-                    <option value="Window Cleaning">Window Cleaning</option>
-                    <option value="Carpet Cleaning">Carpet Cleaning</option>
-                    <option value="Building Wash">Building Wash</option>
-                </select>
+                <input type="text" name="service" id="service" class="form-control" required>
             </div>
-            <button type="button" class="btn btn-primary" onclick="showSummary()">Next</button>
+            <div class="mb-3">
+                <label for="reply_to" class="form-label">Reply-to Email</label>
+                <input type="email" name="reply_to" id="reply_to" class="form-control" required>
+            </div>
+            <button type="submit" id="button" class="btn btn-primary">Send Email</button>
         </form>
-
-        
-        <div id="summarySection" class="hidden">
-            <h3>Summary of Your Information</h3>
-            <p><strong>Name:</strong> <span id="summaryName"></span></p>
-            <p><strong>Phone:</strong> <span id="summaryPhone"></span></p>
-            <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
-            <p><strong>Address:</strong> <span id="summaryAddress"></span></p>
-            <p><strong>Postcode:</strong> <span id="summaryPostcode"></span></p>
-            <p><strong>Service Needed:</strong> <span id="summaryService"></span></p>
-
-            
-            <button class="btn btn-warning" onclick="editForm()">Edit</button>
-            <button class="btn btn-secondary" onclick="cancelForm()">Cancel</button>
-            <button class="btn btn-success" onclick="sendEmail()">Send</button>
-        </div>
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-      (function() {
-        emailjs.init('KzkCYieu-kziUs-v_');  
-      })();
+        emailjs.init('4q40hNlahTjioadX7');  // Replace 'YOUR_USER_ID' with your EmailJS user ID
+    </script>
 
-      
-      function showSummary() {
-        
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
-        const address = document.getElementById('address').value;
-        const postcode = document.getElementById('postcode').value;
-        const service = document.getElementById('service').value;
+    <script type="text/javascript">
+        const btn = document.getElementById('button');
 
-        
-        document.getElementById('summaryName').innerText = name;
-        document.getElementById('summaryPhone').innerText = phone;
-        document.getElementById('summaryEmail').innerText = email;
-        document.getElementById('summaryAddress').innerText = address;
-        document.getElementById('summaryPostcode').innerText = postcode;
-        document.getElementById('summaryService').innerText = service;
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent default form submission
 
-        
-        document.getElementById('quoteForm').classList.add('hidden');
-        document.getElementById('summarySection').classList.remove('hidden');
-      }
+            btn.value = 'Sending...';
 
-      
-      function editForm() {
-        
-        document.getElementById('quoteForm').classList.remove('hidden');
-        document.getElementById('summarySection').classList.add('hidden');
-      }
+            const serviceID = 'service_53suqkq';  // Use the EmailJS service ID
+            const templateID = 'template_g574p8j';  // Replace with your actual template ID
 
-     
-      function cancelForm() {
-        
-        document.getElementById('quoteForm').reset();
-        document.getElementById('summarySection').classList.add('hidden');
-        document.getElementById('quoteForm').classList.remove('hidden');
-      }
-
-      
-      function sendEmail() {
-        const formData = {
-          name: document.getElementById('name').value,
-          phone: document.getElementById('phone').value,
-          email: document.getElementById('email').value,
-          address: document.getElementById('address').value,
-          postcode: document.getElementById('postcode').value,
-          service: document.getElementById('service').value
-        };
-
-        emailjs.send("service_53suqkq","template_g574p8j")
-          .then(function(response) {
-            alert('Your inquiry has been sent successfully!');
-            document.getElementById('quoteForm').reset();
-            cancelForm();
-          }, function(error) {
-            alert('Failed to send the email. Please try again.');
-          });
-      }
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Email sent successfully!');
+                document.getElementById('form').reset();  // Reset form fields after submission
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));  // Show error if email fails to send
+            });
+        });
     </script>
 </body>
 </html>
