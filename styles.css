@@ -1,3 +1,4 @@
+/* Main Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -8,6 +9,60 @@ body {
     min-height: 100vh;
 }
 
+section {
+    padding: 50px 20px;
+}
+
+/* Animation Styles */
+.animated-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-section.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.animated-section.slide-in {
+    animation: slideIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Section Backgrounds */
+#why-cleaning, #who-we-are {
+    background-color: #f8f8f8;
+}
+
+#why-us, #our-history {
+    background-color: #fff;
+}
+
+/* Typography */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+/* Hero Section Styles */
 #hero {
     position: relative;
     width: 100%;
@@ -49,6 +104,7 @@ body {
     100% { opacity: 0; }
 }
 
+/* Hero Overlay */
 #hero::before {
     content: '';
     position: absolute;
@@ -95,169 +151,15 @@ body {
 
 .btn-primary:hover { background-color: #cc0000; }
 
-.service-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-}
-
-.service-card {
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1 1 30%;
-    text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-    background-color: #e6e6e6;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.service-card h3 { margin-bottom: 15px; font-size: 1.8em; }
-.service-card p { font-size: 1em; color: #666; }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.logo { width: 150px; }
-
-.navbar-toggler { display: none; }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav ul li { margin: 0 15px; }
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 5px;
-}
-
-nav ul li a:hover {
-    color: #ff0000;
-    border-bottom: 2px solid #ff0000;
-}
-
-nav ul li a.active {
-    color: #ff0000;
-    border-bottom: 2px solid #ff0000;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.gallery-grid a img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-grid a:hover img { transform: scale(1.05); }
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.2em;
-    transition: background 0.3s ease;
-}
-
-.gallery-item:hover .gallery-caption { background: rgba(0, 0, 0, 0.8); }
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    .service-card { flex: 1 1 45%; }
     #hero h1 { font-size: 2em; }
     #hero p { font-size: 1.2em; }
     .btn-primary { padding: 10px; }
 }
 
 @media (max-width: 480px) {
-    header { padding: 10px; }
-    .logo { width: 100px; }
-    nav ul { flex-direction: column; text-align: center; }
-    nav ul li { margin: 5px 0; }
     #hero h1 { font-size: 1.5em; }
     #hero p { font-size: 1em; }
     .btn-primary { padding: 8px; font-size: 0.9em; }
-    .service-card { flex: 1 1 100%; }
-    .gallery-grid { grid-template-columns: 1fr; }
-}
-
-.navbar {
-    padding: 10px 15px;
-}
-
-.navbar-brand img {
-    width: 120px;
-    height: auto;
-}
-
-.navbar-nav .nav-link {
-    font-size: 0.9em;
-    padding: 5px 10px;
-}
-
-.navbar-toggler {
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-    .navbar-brand img { width: 100px; }
-    .navbar-nav .nav-link { font-size: 0.8em; }
 }
