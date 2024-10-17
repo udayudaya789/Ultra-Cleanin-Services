@@ -6,15 +6,13 @@
     <title>Ultra Cleaning Southland Ltd</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="./Assests/Final 2 logo.gif" alt="Ultra Cleaning Southland Ltd Logo" class="logo" width="150">
+                    <img src="./Assests/FinalLogo.gif" alt="Ultra Cleaning Southland Ltd Logo" class="logo" width="150">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,7 +22,7 @@
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
@@ -33,100 +31,117 @@
         </nav>
     </header>
 
-    <!-- Hero Section with CSS-based Slideshow -->
-    <section id="hero">
+    <!-- Hero Section with Slideshow -->
+    <section id="hero" class="text-center">
         <div class="slideshow-container">
-            <img src="./Assests/HRO/0371-H3124743-99635686__1721250209-17031-33KakarikiWay-15.jpg" alt="Cleaning Service 1">
-            <img src="./Assests/HRO/2459-H3124743-99635668__1721250185-6903-33KakarikiWay-13.jpg" alt="Cleaning Service 2">
-            <img src="./Assests/HRO/27a9-H3124743-99635936__1721250280-6971-33KakarikiWay-23.jpg" alt="Cleaning Service 3">
-            <img src="./Assests/HRO/56ac-H3124743-99635691__1721250219-16793-33KakarikiWay-16.jpg" alt="Cleaning Service 4">
-            <img src="./Assests/HRO/9573-H3124743-99636096__1721250327-17027-33KakarikiWay-27.jpg" alt="Cleaning Service 5">
-            <img src="./Assests/HRO/edf6-H3124743-99635676__1721250196-6873-33KakarikiWay-14.jpg" alt="Cleaning Service 6">
+            <img src="./Assests/HRO/0371-H3124743-99635686__1721250209-17031-33KakarikiWay-15.jpg" alt="Cleaning Service 1" class="slide">
+            <img src="./Assests/HRO/2459-H3124743-99635668__1721250185-6903-33KakarikiWay-13.jpg" alt="Cleaning Service 2" class="slide">
+            <img src="./Assests/HRO/27a9-H3124743-99635936__1721250280-6971-33KakarikiWay-23.jpg" alt="Cleaning Service 3" class="slide">
+            <img src="./Assests/HRO/56ac-H3124743-99635691__1721250219-16793-33KakarikiWay-16.jpg" alt="Cleaning Service 4" class="slide">
+            <img src="./Assests/HRO/9573-H3124743-99636096__1721250327-17027-33KakarikiWay-27.jpg" alt="Cleaning Service 5" class="slide">
+            <img src="./Assests/HRO/edf6-H3124743-99635676__1721250196-6873-33KakarikiWay-14.jpg" alt="Cleaning Service 6" class="slide">
         </div>
-
         <div class="hero-content">
             <h1>Welcome to Ultra Cleaning Southland Ltd</h1>
             <p>Your satisfaction is our priority. We offer professional and reliable cleaning services for businesses and homes.</p>
-            <!-- Button to trigger the form modal -->
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Free Quote</a>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Free Quote</button>
         </div>
     </section>
 
-    <!-- Modal for Get a Free Quote Form -->
+    <!-- Free Quote Form Modal -->
     <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Smaller, centered modal -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="quoteModalLabel">Get a Free Quote</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="quoteForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" required>
-              </div>
-              <div class="mb-3">
-                <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" class="form-control" id="postcode" required>
-              </div>
-              <div class="mb-3">
-                <label for="service" class="form-label">What kind of cleaning service do you want?</label>
-                <select class="form-select" id="service" required>
-                  <option value="">Select a service</option>
-                  <option value="Commercial Cleaning">Commercial Cleaning</option>
-                  <option value="Domestic Cleaning">Domestic Cleaning</option>
-                  <option value="Residential Cleaning">Residential Cleaning</option>
-                  <option value="Window Cleaning">Window Cleaning</option>
-                  <option value="Carpet Cleaning">Carpet Cleaning</option>
-                  <option value="Building Wash">Building Wash</option>
-                </select>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="showSummary()">Next</button>
-              </div>
-            </form>
-          </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quoteModalLabel">Get a Free Quote</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <select class="form-select" id="city" name="city" required>
+                                <option value="">Select your city</option>
+                                <option value="Invercargill">Invercargill</option>
+                                <option value="Gore">Gore</option>
+                                <option value="Winton">Winton</option>
+                                <option value="Te Anau">Te Anau</option>
+                                <option value="Riverton">Riverton</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Cleaning Service Needed</label>
+                            <select class="form-select" id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                <option value="Domestic Cleaning">Domestic Cleaning</option>
+                                <option value="Residential Cleaning">Residential Cleaning</option>
+                                <option value="Window Cleaning">Window Cleaning</option>
+                                <option value="Carpet Cleaning">Carpet Cleaning</option>
+                                <option value="Building Wash">Building Wash</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Urgency of Request</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="urgency" id="urgent" value="Urgent" required>
+                                <label class="form-check-label" for="urgent">Urgent</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="urgency" id="flexible" value="Flexible">
+                                <label class="form-check-label" for="flexible">Flexible</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="showSummary()">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <!-- Modal for Summary of the form data -->
+    <!-- Summary Modal -->
     <div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="summaryModalLabel">Summary of Your Information</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p><strong>Name:</strong> <span id="summaryName"></span></p>
-            <p><strong>Phone:</strong> <span id="summaryPhone"></span></p>
-            <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
-            <p><strong>Address:</strong> <span id="summaryAddress"></span></p>
-            <p><strong>Postcode:</strong> <span id="summaryPostcode"></span></p>
-            <p><strong>Service Needed:</strong> <span id="summaryService"></span></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="editForm()">Edit</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-success" onclick="sendEmail()">Send</button>
-          </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="summaryModalLabel">Summary of Your Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>First Name:</strong> <span id="summaryFirstName"></span></p>
+                    <p><strong>Last Name:</strong> <span id="summaryLastName"></span></p>
+                    <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+                    <p><strong>Phone Number:</strong> <span id="summaryPhone"></span></p>
+                    <p><strong>City:</strong> <span id="summaryCity"></span></p>
+                    <p><strong>Service Needed:</strong> <span id="summaryService"></span></p>
+                    <p><strong>Urgency:</strong> <span id="summaryUrgency"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal" onclick="editForm()">Edit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" onclick="sendEmail()">Send Email</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <footer class="text-center bg-dark text-white py-3">
@@ -134,63 +149,7 @@
         <p>&copy; 2024 Ultra Cleaning Southland Ltd</p>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script type="text/javascript">
-      (function() 
-      {
-        emailjs.init('4q40hNlahTjioadX7'); 
-      })();
-
-      function showSummary() {
-        
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
-        const address = document.getElementById('address').value;
-        const postcode = document.getElementById('postcode').value;
-        const service = document.getElementById('service').value;
-
-        
-        document.getElementById('summaryName').innerText = name;
-        document.getElementById('summaryPhone').innerText = phone;
-        document.getElementById('summaryEmail').innerText = email;
-        document.getElementById('summaryAddress').innerText = address;
-        document.getElementById('summaryPostcode').innerText = postcode;
-        document.getElementById('summaryService').innerText = service;
-
-        
-        new bootstrap.Modal(document.getElementById('summaryModal')).show();
-      }
-
-      function editForm() {
-        
-        new bootstrap.Modal(document.getElementById('quoteModal')).show();
-      }
-
-      function sendEmail() {
-        const formData = {
-          name: document.getElementById('name').value,
-          phone: document.getElementById('phone').value,
-          email: document.getElementById('email').value,
-          address: document.getElementById('address').value,
-          postcode: document.getElementById('postcode').value,
-          service: document.getElementById('service').value
-        };
-
-        emailjs.send("service_53suqkq","template_g574p8j")
-          .then(function(response) {
-            alert('Your inquiry has been sent successfully!');
-            document.getElementById('quoteForm').reset();  
-          }, function(error) {
-            alert('Failed to send the email. Please try again.');
-          });
-      }
-    </script>
+    <script src="javascript.js"></script> 
 </body>
 </html>

@@ -1,4 +1,3 @@
-/* General Body Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -6,15 +5,14 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes full height */
+    min-height: 100vh;
 }
 
-/* Hero Section Slideshow */
 #hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide anything overflowing */
+    height: 100vh;
+    overflow: hidden;
 }
 
 .slideshow-container {
@@ -31,32 +29,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Make sure the images cover the container */
+    object-fit: cover;
     opacity: 0;
-    animation: slideShow 36s infinite; /* Animation for the slideshow */
+    animation: slideShow 36s infinite;
 }
 
-/* Assign delay for each image to show in sequence */
-.slideshow-container img:nth-child(1) {
-    animation-delay: 0s;
-}
-.slideshow-container img:nth-child(2) {
-    animation-delay: 6s;
-}
-.slideshow-container img:nth-child(3) {
-    animation-delay: 12s;
-}
-.slideshow-container img:nth-child(4) {
-    animation-delay: 18s;
-}
-.slideshow-container img:nth-child(5) {
-    animation-delay: 24s;
-}
-.slideshow-container img:nth-child(6) {
-    animation-delay: 30s;
-}
+.slideshow-container img:nth-child(1) { animation-delay: 0s; }
+.slideshow-container img:nth-child(2) { animation-delay: 6s; }
+.slideshow-container img:nth-child(3) { animation-delay: 12s; }
+.slideshow-container img:nth-child(4) { animation-delay: 18s; }
+.slideshow-container img:nth-child(5) { animation-delay: 24s; }
+.slideshow-container img:nth-child(6) { animation-delay: 30s; }
 
-/* Keyframes for fading in and out */
 @keyframes slideShow {
     0% { opacity: 0; }
     8% { opacity: 1; }
@@ -65,7 +49,6 @@ body {
     100% { opacity: 0; }
 }
 
-/* Dim Overlay for the Slideshow */
 #hero::before {
     content: '';
     position: absolute;
@@ -73,11 +56,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-/* Content inside the hero section */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -85,7 +67,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 2; /* Ensure it's above the overlay */
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -111,11 +93,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #cc0000;
-}
+.btn-primary:hover { background-color: #cc0000; }
 
-/* Services Section Styling with Flexbox */
 .service-grid {
     display: flex;
     flex-wrap: wrap;
@@ -128,30 +107,21 @@ body {
     background-color: #f8f8f8;
     border-radius: 10px;
     padding: 20px;
-    flex: 1 1 30%; /* Grow and shrink with minimum width */
+    flex: 1 1 30%;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover Effect for Service Cards */
 .service-card:hover {
     transform: scale(1.05);
     background-color: #e6e6e6;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.service-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.8em;
-}
+.service-card h3 { margin-bottom: 15px; font-size: 1.8em; }
+.service-card p { font-size: 1em; color: #666; }
 
-.service-card p {
-    font-size: 1em;
-    color: #666;
-}
-
-/* Header and Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -161,15 +131,10 @@ header {
     flex-wrap: wrap;
 }
 
-.logo {
-    width: 150px;
-}
+.logo { width: 150px; }
 
-.navbar-toggler {
-    display: none; /* Hidden by default */
-}
+.navbar-toggler { display: none; }
 
-/* Flexbox for Navigation */
 nav ul {
     list-style: none;
     margin: 0;
@@ -178,9 +143,7 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
+nav ul li { margin: 0 15px; }
 
 nav ul li a {
     text-decoration: none;
@@ -196,25 +159,22 @@ nav ul li a:hover {
     border-bottom: 2px solid #ff0000;
 }
 
-/* Active Link Styling */
 nav ul li a.active {
     color: #ff0000;
     border-bottom: 2px solid #ff0000;
 }
 
-/* Footer Fix: Footer stays at the bottom */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Ensures footer stays at the bottom of the page */
+    margin-top: auto;
 }
 
-/* Gallery Section Styles */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px 0;
 }
@@ -227,11 +187,8 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.gallery-grid a:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
+.gallery-grid a:hover img { transform: scale(1.05); }
 
-/* Hover and Caption Effects */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -239,8 +196,8 @@ footer {
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Slight zoom of the whole card */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-caption {
@@ -248,7 +205,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the caption */
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 10px;
@@ -256,101 +213,51 @@ footer {
     transition: background 0.3s ease;
 }
 
-.gallery-item:hover .gallery-caption {
-    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-}
+.gallery-item:hover .gallery-caption { background: rgba(0, 0, 0, 0.8); }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .service-card {
-        flex: 1 1 45%; /* Adjust to two columns on medium screens */
-    }
-
-    #hero h1 {
-        font-size: 2em;
-    }
-
-    #hero p {
-        font-size: 1.2em;
-    }
-
-    .btn-primary {
-        padding: 10px;
-    }
+    .service-card { flex: 1 1 45%; }
+    #hero h1 { font-size: 2em; }
+    #hero p { font-size: 1.2em; }
+    .btn-primary { padding: 10px; }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    .logo {
-        width: 100px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    #hero h1 {
-        font-size: 1.5em;
-    }
-
-    #hero p {
-        font-size: 1em;
-    }
-
-    .btn-primary {
-        padding: 8px;
-        font-size: 0.9em;
-    }
-
-    .service-card {
-        flex: 1 1 100%; /* Adjust to one column on small screens */
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+    header { padding: 10px; }
+    .logo { width: 100px; }
+    nav ul { flex-direction: column; text-align: center; }
+    nav ul li { margin: 5px 0; }
+    #hero h1 { font-size: 1.5em; }
+    #hero p { font-size: 1em; }
+    .btn-primary { padding: 8px; font-size: 0.9em; }
+    .service-card { flex: 1 1 100%; }
+    .gallery-grid { grid-template-columns: 1fr; }
 }
-/* Reduce the height of the navbar by adjusting padding */
+
 .navbar {
-    padding: 10px 15px; /* Adjust padding as necessary */
+    padding: 10px 15px;
 }
 
 .navbar-brand img {
-    width: 120px; /* Decrease logo size */
+    width: 120px;
     height: auto;
 }
 
-/* Decrease font size for navbar links */
 .navbar-nav .nav-link {
-    font-size: 0.9em; /* Smaller font size for the links */
-    padding: 5px 10px; /* Adjust padding around the links */
+    font-size: 0.9em;
+    padding: 5px 10px;
 }
 
-/* Adjust the navbar-toggler button size */
 .navbar-toggler {
-    padding: 0.25rem 0.5rem; /* Smaller toggle button for mobile */
-    font-size: 1rem; /* Adjust font size of the toggle icon */
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
 }
 
-/* Responsive adjustments for even smaller screens */
 @media (max-width: 768px) {
-    .navbar-brand img {
-        width: 100px; /* Further decrease logo size for mobile */
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 0.8em; /* Even smaller font size for mobile */
-    }
+    .navbar-brand img { width: 100px; }
+    .navbar-nav .nav-link { font-size: 0.8em; }
 }
