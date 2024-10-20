@@ -163,3 +163,86 @@ p {
     #hero p { font-size: 1em; }
     .btn-primary { padding: 8px; font-size: 0.9em; }
 }
+
+/* Custom Navigation Bar */
+.custom-navbar {
+    background-color: #005B87; /* Changing the background color to match the brand */
+    padding: 15px 20px;
+    transition: background-color 0.5s ease;
+}
+
+.custom-navbar .navbar-toggler {
+    background-color: #fff;
+}
+
+.custom-navbar .navbar-brand img {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover img {
+    transform: scale(1.1); /* Slight scale-up animation for logo on hover */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: red;
+    font-weight: bold;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1); /* Underline animation on hover */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: red; /* Change text color on hover */
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: red; /* Active link color */
+}
+
+.custom-navbar .navbar-nav .nav-link.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Navbar Transition on Scroll */
+.custom-navbar.scrolled {
+    background-color: #004065; /* Darker background on scroll */
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile View Customization */
+@media (max-width: 768px) {
+    .custom-navbar .navbar-nav {
+        text-align: center;
+        background-color: #005B87;
+    }
+
+    .custom-navbar .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .custom-navbar .navbar-toggler {
+        background-color: #f2a3a3;
+    }
+}

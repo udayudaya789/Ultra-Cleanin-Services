@@ -6,7 +6,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+    
 });
+
 
 // Form Validation Function
 function validateForm() {
@@ -77,3 +79,13 @@ function cancelForm() {
     const summaryModal = bootstrap.Modal.getInstance(document.getElementById('summaryModal'));
     if (summaryModal) summaryModal.hide();
 }
+window.addEventListener('scroll', function () {
+    var navbar = document.querySelector('.custom-navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+
+    
+});
