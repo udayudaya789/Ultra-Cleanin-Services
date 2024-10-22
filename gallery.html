@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Cleaning Southland Ltd</title>
+    <title>Ultra Cleaning Southland Ltd - Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -43,55 +44,76 @@
         </nav>
     </header>
 
-    <!-- Rest of your content... -->
-
-    <!-- Include Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Your custom scripts -->
-    <script src="javascript.js"></script>
-
+    <!-- Gallery Section -->
     <section id="gallery" class="container py-5">
         <h2 class="text-center mb-5">Our Cleaning Services Gallery</h2>
-    
-        <!-- Example for Category 1: Commercial Cleaning -->
-        <h3>Commercial Cleaning</h3>
-        <div class="gallery-grid">
-            <a href="./Assets/Gallery/commercial-cleaning1.jpg" data-lightbox="commercial" data-title="Commercial Cleaning 1">
-                <img src="./Assets/Gallery/commercial-cleaning1.jpg" alt="Commercial Cleaning 1" class="hover-shadow">
-            </a>
-            <a href="./Assets/Gallery/commercial-cleaning2.jpg" data-lightbox="commercial" data-title="Commercial Cleaning 2">
-                <img src="./Assets/Gallery/commercial-cleaning2.jpg" alt="Commercial Cleaning 2" class="hover-shadow">
-            </a>
-            <a href="./Assets/Gallery/commercial-cleaning3.jpg" data-lightbox="commercial" data-title="Commercial Cleaning 3">
-                <img src="./Assets/Gallery/commercial-cleaning3.jpg" alt="Commercial Cleaning 3" class="hover-shadow">
-            </a>
-            <!-- Add more images as needed -->
+
+        <!-- Category 1: Before After Cleanings -->
+        <h3>Before After Cleanings</h3>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assests/Before after cleanings/20240516_092441.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 1">
+                    <img src="./Assests/Before after cleanings/20240516_092441.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 1">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assests/Before after cleanings/20240516_092448.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 2">
+                    <img src="./Assests/Before after cleanings/20240516_092448.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 2">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assets/Gallery/before-after3.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 3">
+                    <img src="./Assets/Gallery/before-after3.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 3">
+                </a>
+            </div>
+            <!-- Add more images in a similar way -->
         </div>
-    
-        <!-- Category 2: Residential Cleaning -->
-        <h3>Residential Cleaning</h3>
-        <div class="gallery-grid">
-            <a href="./Assets/Gallery/residential-cleaning1.jpg" data-lightbox="residential" data-title="Residential Cleaning 1">
-                <img src="./Assets/Gallery/residential-cleaning1.jpg" alt="Residential Cleaning 1" class="hover-shadow">
-            </a>
-            <a href="./Assets/Gallery/residential-cleaning2.jpg" data-lightbox="residential" data-title="Residential Cleaning 2">
-                <img src="./Assets/Gallery/residential-cleaning2.jpg" alt="Residential Cleaning 2" class="hover-shadow">
-            </a>
-            <!-- Add more images -->
+
+        <!-- Category 2: Builders New Home Cleaning -->
+        <h3>Builders New Home Cleaning</h3>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assets/Gallery/builders-new-home1.jpg" data-lightbox="buildersGallery" data-title="Builders New Home Cleaning 1">
+                    <img src="./Assets/Gallery/builders-new-home1.jpg" class="img-fluid hover-shadow" alt="Builders New Home Cleaning 1">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assets/Gallery/builders-new-home2.jpg" data-lightbox="buildersGallery" data-title="Builders New Home Cleaning 2">
+                    <img src="./Assets/Gallery/builders-new-home2.jpg" class="img-fluid hover-shadow" alt="Builders New Home Cleaning 2">
+                </a>
+            </div>
+            <!-- Add more images in a similar way -->
         </div>
-    
-        <!-- Repeat for other categories: Domestic Cleaning, Hoarder Cleaning, etc. -->
+
+        <!-- Category 3: Commercial Office Cleaning -->
+        <h3>Commercial Office Cleaning</h3>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assets/Gallery/commercial-office1.jpg" data-lightbox="commercialGallery" data-title="Commercial Office Cleaning 1">
+                    <img src="./Assets/Gallery/commercial-office1.jpg" class="img-fluid hover-shadow" alt="Commercial Office Cleaning 1">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <a href="./Assets/Gallery/commercial-office2.jpg" data-lightbox="commercialGallery" data-title="Commercial Office Cleaning 2">
+                    <img src="./Assets/Gallery/commercial-office2.jpg" class="img-fluid hover-shadow" alt="Commercial Office Cleaning 2">
+                </a>
+            </div>
+            <!-- Add more images in a similar way -->
+        </div>
+
+        <!-- Add more categories following the same structure -->
+
     </section>
-    
 
     <footer class="text-center bg-dark text-white py-3">
         <p>Contact Us: admin@ultraclean.co.nz | Phone: 027 349 6614</p>
         <p>&copy; 2024 Ultra Cleaning Southland Ltd</p>
     </footer>
 
-    <!-- Lightbox2 JS for Gallery functionality -->
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>

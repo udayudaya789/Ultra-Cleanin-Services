@@ -246,3 +246,210 @@ p {
         background-color: #f2a3a3;
     }
 }
+
+/* Service Card Styles */
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 30%;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    background-color: #e6e6e6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 { margin-bottom: 15px; font-size: 1.8em; }
+.service-card p { font-size: 1em; color: #666; }
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(0,0,255,0.1));
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+/* Main Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* About Us Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #005B87;
+    text-transform: uppercase;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+}
+
+.grid-container.reverse {
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row-reverse;
+}
+
+/* Team Section */
+.team-photo, .mission-photo {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.grid-item p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Animations */
+.animated-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-section.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hover Effects */
+.grid-item:hover {
+    background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(0,0,255,0.1));
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section h2 {
+        font-size: 2em;
+    }
+
+    .grid-item h3 {
+        font-size: 1.8em;
+    }
+
+    .grid-item p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 1.5em;
+    }
+
+    .grid-item h3 {
+        font-size: 1.5em;
+    }
+
+    .grid-item p {
+        font-size: 0.9em;
+    }
+}
+/* Grid for the gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.carousel-inner img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}
+.hover-shadow {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
