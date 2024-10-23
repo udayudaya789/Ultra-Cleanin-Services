@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg custom-navbar navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="./Assests/FinalLogo.gif" alt="Ultra Cleaning Southland Ltd Logo" class="logo" width="150">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
@@ -29,8 +33,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="services.html">Services</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                <li><a class="dropdown-item" href="#before-after-cleanings">Before After Cleanings</a></li>
+                                <li><a class="dropdown-item" href="#builders-new-home-cleaning">Builders New Home
+                                        Cleaning</a></li>
+                                <li><a class="dropdown-item" href="#commercial-office-cleaning">Commercial Office
+                                        Cleaning</a></li>
+                                <li><a class="dropdown-item" href="#farm-house-cleaning">Farm House Cleaning</a></li>
+                                <li><a class="dropdown-item" href="#hob-cleaning">Hob Cleaning</a></li>
+                                <li><a class="dropdown-item" href="#mall-cleaning">Invercargill Central Mall
+                                        Cleaning</a></li>
+                                <li><a class="dropdown-item" href="#window-cleaning">Window Cleaning</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="testimonials.html">Testimonials</a>
@@ -49,59 +68,149 @@
         <h2 class="text-center mb-5">Our Cleaning Services Gallery</h2>
 
         <!-- Category 1: Before After Cleanings -->
-        <h3>Before After Cleanings</h3>
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assests/Before after cleanings/20240516_092441.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 1">
-                    <img src="./Assests/Before after cleanings/20240516_092441.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 1">
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assests/Before after cleanings/20240516_092448.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 2">
-                    <img src="./Assests/Before after cleanings/20240516_092448.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 2">
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assets/Gallery/before-after3.jpg" data-lightbox="beforeAfterGallery" data-title="Before After Cleaning 3">
-                    <img src="./Assets/Gallery/before-after3.jpg" class="img-fluid hover-shadow" alt="Before After Cleaning 3">
-                </a>
-            </div>
-            <!-- Add more images in a similar way -->
+        <h3 id="before-after-cleanings">Before After Cleanings</h3>
+        <div class="gallery-grid">
+            <a href="Assests/Before after cleanings/20240516_092505.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 1">
+                <img src="Assests/Before after cleanings/20240516_092505.jpg" alt="Before After Cleaning 1">
+            </a>
+            <a href="Assests/Before after cleanings/20240516_153900.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 2">
+                <img src="Assests/Before after cleanings/20240516_153900.jpg" alt="Before After Cleaning 2">
+            </a>
+            <a href="Assests/Before after cleanings/20240516_153904.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 3">
+                <img src="Assests/Before after cleanings/20240516_153904.jpg" alt="Before After Cleaning 3">
+            </a>
+            <a href="Assests/Before after cleanings/20240516_154735.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 4">
+                <img src="Assests/Before after cleanings/20240516_154735.jpg" alt="Before After Cleaning 4"
+                    class="large">
+            </a>
+            <a href="Assests/Before after cleanings/20240517_093214.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 5">
+                <img src="Assests/Before after cleanings/20240517_093214.jpg" alt="Before After Cleaning 5">
+            </a>
+            <a href="Assests/Before after cleanings/20240517_111020.jpg" data-lightbox="beforeAfterGallery"
+                data-title="Before After Cleaning 6">
+                <img src="Assests/Before after cleanings/20240517_111020.jpg" alt="Before After Cleaning 6">
+            </a>
         </div>
 
-        <!-- Category 2: Builders New Home Cleaning -->
-        <h3>Builders New Home Cleaning</h3>
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assets/Gallery/builders-new-home1.jpg" data-lightbox="buildersGallery" data-title="Builders New Home Cleaning 1">
-                    <img src="./Assets/Gallery/builders-new-home1.jpg" class="img-fluid hover-shadow" alt="Builders New Home Cleaning 1">
-                </a>
+        <!-- Slideshow Category: Builders New Home Cleaning -->
+        <h3 id="builders-new-home-cleaning">Builders New Home Cleaning</h3>
+        <div id="buildersNewHomeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Assests/Builders new home cleaning/20230202_121048.jpg" class="d-block w-100"
+                        alt="New Home Cleaning 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assests/Builders new home cleaning/20230202_121053.jpg" class="d-block w-100"
+                        alt="New Home Cleaning 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assests/Builders new home cleaning/20230202_121100.jpg" class="d-block w-100"
+                        alt="New Home Cleaning 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assests/Builders new home cleaning/20230202_121110.jpg" class="d-block w-100"
+                        alt="New Home Cleaning 4">
+                </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assets/Gallery/builders-new-home2.jpg" data-lightbox="buildersGallery" data-title="Builders New Home Cleaning 2">
-                    <img src="./Assets/Gallery/builders-new-home2.jpg" class="img-fluid hover-shadow" alt="Builders New Home Cleaning 2">
-                </a>
-            </div>
-            <!-- Add more images in a similar way -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#buildersNewHomeCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#buildersNewHomeCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
         <!-- Category 3: Commercial Office Cleaning -->
-        <h3>Commercial Office Cleaning</h3>
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assets/Gallery/commercial-office1.jpg" data-lightbox="commercialGallery" data-title="Commercial Office Cleaning 1">
-                    <img src="./Assets/Gallery/commercial-office1.jpg" class="img-fluid hover-shadow" alt="Commercial Office Cleaning 1">
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-                <a href="./Assets/Gallery/commercial-office2.jpg" data-lightbox="commercialGallery" data-title="Commercial Office Cleaning 2">
-                    <img src="./Assets/Gallery/commercial-office2.jpg" class="img-fluid hover-shadow" alt="Commercial Office Cleaning 2">
-                </a>
-            </div>
-            <!-- Add more images in a similar way -->
+        <h3 id="commercial-office-cleaning">Commercial Office Cleaning</h3>
+        <div class="gallery-grid">
+            <a href="Assests/Commercial office cleaning/20230719_101310.jpg" data-lightbox="commercialGallery"
+                data-title="Commercial Office Cleaning 1">
+                <img src="Assests/Commercial office cleaning/20230719_101310.jpg" alt="Commercial Office Cleaning 1">
+            </a>
         </div>
 
-        <!-- Add more categories following the same structure -->
+        <!-- Category 4: Farm House Cleaning -->
+        <h3 id="farm-house-cleaning">Farm House Cleaning</h3>
+        <div class="gallery-grid">
+            <a href="Assests/FarmHouseCleaning/20230607_130626.jpg" data-lightbox="farmHouseGallery"
+                data-title="Farm House Cleaning 1">
+                <img src="Assests/FarmHouseCleaning/20230607_130626.jpg" alt="Farm House Cleaning 1">
+            </a>
+            <a href="Assests/FarmHouseCleaning/20230607_130638.jpg" data-lightbox="farmHouseGallery"
+                data-title="Farm House Cleaning 2">
+                <img src="Assests/FarmHouseCleaning/20230607_130638.jpg" alt="Farm House Cleaning 2">
+            </a>
+            <a href="Assests/FarmHouseCleaning/20230607_104523.jpg" data-lightbox="farmHouseGallery"
+                data-title="Farm House Cleaning 3">
+                <img src="Assests/FarmHouseCleaning/20230607_104523.jpg" alt="Farm House Cleaning 3" class="large">
+            </a>
+            <a href="Assests/FarmHouseCleaning/20230607_104815.jpg" data-lightbox="farmHouseGallery"
+                data-title="Farm House Cleaning 4">
+                <img src="Assests/FarmHouseCleaning/20230607_104815.jpg" alt="Farm House Cleaning 4">
+            </a>
+            <a href="Assests/FarmHouseCleaning/20230607_120123.jpg" data-lightbox="farmHouseGallery"
+                data-title="Farm House Cleaning 5">
+                <img src="Assests/FarmHouseCleaning/20230607_120123.jpg" alt="Farm House Cleaning 5">
+            </a>
+        </div>
+
+        <!-- Category 5: Hob Cleaning -->
+        <h3 id="hob-cleaning">Hob Cleaning</h3>
+        <div class="gallery-grid">
+            <a href="Assests/Hob Cleaning/20240429_092909.jpg" data-lightbox="hobCleaningGallery" data-title="Hob Cleaning 1">
+                <img src="Assests/Hob Cleaning/20240429_092909.jpg" alt="Hob Cleaning 1">
+            </a>
+            <a href="Assests/Hob Cleaning/20240429_092923.jpg" data-lightbox="hobCleaningGallery" data-title="Hob Cleaning 2">
+                <img src="Assests/Hob Cleaning/20240429_092923.jpg" alt="Hob Cleaning 2">
+            </a>
+            <a href="Assests/Hob Cleaning/20240429_092820.jpg" data-lightbox="hobCleaningGallery" data-title="Hob Cleaning 3">
+                <img src="Assests/Hob Cleaning/20240429_092820.jpg" alt="Hob Cleaning 3" class="large">
+            </a>
+            <a href="Assests/Hob Cleaning/20240429_115058.jpg" data-lightbox="hobCleaningGallery" data-title="Hob Cleaning 4">
+                <img src="Assests/Hob Cleaning/20240429_115058.jpg" alt="Hob Cleaning 4">
+            </a>
+        </div>
+
+        <!-- Category 6: Invercargill Central Mall Cleaning -->
+        <h3 id="mall-cleaning">Invercargill Central Mall Cleaning</h3>
+        <div class="gallery-grid">
+            <a href="Assests/IC Mall Cleaning/20240119_204839.jpg" data-lightbox="mallGallery" data-title="Mall Cleaning 1">
+                <img src="Assests/IC Mall Cleaning/20240119_204839.jpg" alt="Mall Cleaning 1">
+            </a>
+            <a href="Assests/IC Mall Cleaning/20240119_204841.jpg" data-lightbox="mallGallery" data-title="Mall Cleaning 2">
+                <img src="Assests/IC Mall Cleaning/20240119_204841.jpg" alt="Mall Cleaning 2">
+            </a>
+            <a href="Assests/IC Mall Cleaning/20240119_204845.jpg" data-lightbox="mallGallery" data-title="Mall Cleaning 3">
+                <img src="Assests/IC Mall Cleaning/20240119_204845.jpg" alt="Mall Cleaning 3" class="large">
+            </a>
+        </div>
+
+        <!-- Category 7: Window Cleaning -->
+        <h3 id="window-cleaning">Window Cleaning</h3>
+        <div class="gallery-grid">
+            <a href="Assests/Window mould cleaning/20230618_110614.jpg" data-lightbox="windowGallery" data-title="Window Cleaning 1">
+                <img src="Assests/Window mould cleaning/20230618_110614.jpg" alt="Window Cleaning 1">
+            </a>
+            <a href="Assests/Window mould cleaning/20230618_110620.jpg" data-lightbox="windowGallery" data-title="Window Cleaning 2">
+                <img src="Assests/Window mould cleaning/20230618_110620.jpg" alt="Window Cleaning 2">
+            </a>
+            <a href="Assests/Window mould cleaning/20230622_155120.jpg" data-lightbox="windowGallery" data-title="Window Cleaning 3">
+                <img src="Assests/Window mould cleaning/20230622_155120.jpg" alt="Window Cleaning 3">
+            </a>
+            <a href="Assests/Window mould cleaning/20230622_155140.jpg" data-lightbox="windowGallery" data-title="Window Cleaning 4">
+                <img src="Assests/Window mould cleaning/20230622_155140.jpg" alt="Window Cleaning 4" class="large">
+            </a>
+        </div>
 
     </section>
 
@@ -116,4 +225,5 @@
     <!-- Include Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
+
 </html>
