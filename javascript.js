@@ -89,4 +89,8 @@ window.addEventListener('scroll', function () {
 
     
 });
-
+document.getElementById('galleryDropdown').addEventListener('click', function (e) {
+    if (!this.classList.contains('show')) {
+        window.location.href = 'gallery.html';
+    }
+});
