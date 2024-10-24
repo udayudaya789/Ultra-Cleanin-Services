@@ -164,88 +164,7 @@
         .btn-primary { padding: 8px; font-size: 0.9em; }
     }
 
-    /* Custom Navigation Bar */
-    .custom-navbar {
-        background-color: #005B87; /* Changing the background color to match the brand */
-        padding: 15px 20px;
-        transition: background-color 0.5s ease;
-    }
-
-    .custom-navbar .navbar-toggler {
-        background-color: #fff;
-    }
-
-    .custom-navbar .navbar-brand img {
-        width: 150px;
-        transition: transform 0.3s ease;
-    }
-
-    .custom-navbar .navbar-brand:hover img {
-        transform: scale(1.1); /* Slight scale-up animation for logo on hover */
-    }
-
-    .custom-navbar .navbar-nav .nav-link {
-        color: red;
-        font-weight: bold;
-        margin: 0 15px;
-        padding-bottom: 5px;
-        position: relative;
-        transition: color 0.3s ease;
-    }
-
-    .custom-navbar .navbar-nav .nav-link::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: blue;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .custom-navbar .navbar-nav .nav-link:hover::before {
-        visibility: visible;
-        transform: scaleX(1); /* Underline animation on hover */
-    }
-
-    .custom-navbar .navbar-nav .nav-link:hover {
-        color: red; /* Change text color on hover */
-    }
-
-    .custom-navbar .navbar-nav .nav-link.active {
-        color: red; /* Active link color */
-    }
-
-    .custom-navbar .navbar-nav .nav-link.active::before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
-
-    /* Navbar Transition on Scroll */
-    .custom-navbar.scrolled {
-        background-color: #004065; /* Darker background on scroll */
-        padding: 10px 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Mobile View Customization */
-    @media (max-width: 768px) {
-        .custom-navbar .navbar-nav {
-            text-align: center;
-            background-color: #005B87;
-        }
-
-        .custom-navbar .navbar-nav .nav-item {
-            margin-bottom: 10px;
-        }
-
-        .custom-navbar .navbar-toggler {
-            background-color: #f2a3a3;
-        }
-    }
+   
 
     /* Service Card Styles */
     .service-grid {
@@ -261,7 +180,7 @@
         border-radius: 10px;
         padding: 20px;
         flex: 1 1 30%;
-        text-align: center;
+        text-align: justify;
         transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         position: relative;
@@ -453,6 +372,8 @@
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
+
+
 /* Custom Navigation Bar */
 .custom-navbar {
     background-color: #ffffff; /* Main brand color */
@@ -491,7 +412,7 @@
 
 /* Box hover effect */
 .custom-navbar .navbar-nav .nav-link:hover {
-    background-color: #1177d0; /* Background color on hover */
+    background-color: #da6c6c; /* Background color on hover */
     color: #333; /* Text color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a 3D effect */
 }
@@ -500,7 +421,7 @@
 
 /* Dropdown Menu */
 .custom-navbar .dropdown-menu {
-    background-color: #004065; /* Darker background for dropdown */
+    background-color: #edeff0; /* Darker background for dropdown */
     border: none;
     border-radius: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -508,7 +429,7 @@
 }
 
 .custom-navbar .dropdown-menu .dropdown-item {
-    color: white;
+    color: rgb(4, 4, 4);
     padding: 10px 20px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px; /* Rounded corners for dropdown items */
@@ -516,7 +437,7 @@
 
 /* Box hover for dropdown */
 .custom-navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #b42c2c; /* Background color on hover */
+    background-color: #6eb2e9; /* Background color on hover */
     color: #333; /* Text color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for dropdown items */
 }
@@ -528,9 +449,9 @@
 
 /* Navbar Transition on Scroll */
 .custom-navbar.scrolled {
-    background-color: #004065; /* Darker background on scroll */
+    background-color: #696262; /* Darker background on scroll */
     padding: 10px 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(201, 103, 103, 0.2);
 }
 
 /* Mobile View Customization */
@@ -549,3 +470,85 @@
     }
 }
 
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Flexbox container for graphical content */
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 45%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    background-color: #e6e6e6;
+}
+
+.info-card h4 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #005B87;
+}
+
+.info-card p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+}
+
+.info-card img {
+    width: 480px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+/* Justify text for testimonials */
+.testimonial-card p {
+    text-align: justify;
+}
+
+/* Style for star rating */
+.star-rating {
+    direction: rtl;
+    font-size: 1.5em;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: gray;
+    font-size: 1.5em;
+}
+
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}

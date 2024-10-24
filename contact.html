@@ -7,7 +7,51 @@
     <title>Ultra Cleaning Southland Ltd - Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+
+    <style>
+        /* Styling the manager box with hover effect */
+        .manager-box {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .manager-box:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .manager-box h3 {
+            margin-bottom: 10px;
+            color: #005B87;
+        }
+
+        .manager-box p {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        /* Styling for Google Maps button */
+        .map-button {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #005B87;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .map-button:hover {
+            background-color: #003f63;
+        }
+
+    </style>
+</head>
 
 <body>
     <header>
@@ -59,22 +103,23 @@
     </header>
 
     <section id="contact" class="container py-5">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message:</label>
-                <textarea id="message" name="message" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <h2 class="text-center">Contact Us</h2>
+        
+        <!-- Manager Information Box -->
+        <div class="manager-box mt-5 mb-4">
+            <h3>Raquel Scheepers</h3>
+            <p><strong>Regional Manager</strong></p>
+            <p>Ultra Cleaning Southland Limited</p>
+            <p>Phone: 03 214 2097</p>
+            <p>Mobile: 027 349 6614</p>
+        </div>
+
+        <!-- Google Map with Directions Button -->
+        <div class="text-center">
+            <a href="https://maps.app.goo.gl/yYDPDzo39ZwW1kA39" target="_blank" class="map-button">
+                Get Directions to Our Office
+            </a>
+        </div>
     </section>
 
     <footer class="text-center bg-dark text-white py-3">

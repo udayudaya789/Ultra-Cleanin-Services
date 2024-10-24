@@ -1,4 +1,4 @@
-// Smooth Scroll for Section Navigation
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,13 +10,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Form Validation Function
+
 function validateForm() {
     const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'city', 'service'];
     const urgency = document.querySelector('input[name="urgency"]:checked');
     let isValid = true;
 
-    // Loop through required fields to check if they are filled
+    
     requiredFields.forEach(field => {
         const input = document.getElementById(field);
         if (input.value === "") {
@@ -27,7 +27,7 @@ function validateForm() {
         }
     });
 
-    // Check if an urgency option is selected
+    
     if (!urgency) {
         alert("Please select an urgency option.");
         isValid = false;
@@ -36,13 +36,13 @@ function validateForm() {
     return isValid;
 }
 
-// Function to Show Summary of Form Input
+
 function showSummary() {
     if (!validateForm()) {
-        return; // Stop if form is invalid
+        return; 
     }
 
-    // Populate the summary fields with form input values
+    
     document.getElementById('summaryFirstName').textContent = document.getElementById('firstName').value;
     document.getElementById('summaryLastName').textContent = document.getElementById('lastName').value;
     document.getElementById('summaryEmail').textContent = document.getElementById('email').value;
@@ -51,14 +51,13 @@ function showSummary() {
     document.getElementById('summaryService').textContent = document.getElementById('service').value;
     document.getElementById('summaryUrgency').textContent = document.querySelector('input[name="urgency"]:checked').value;
     
-    // Hide the quote form modal and show the summary modal
     const quoteModal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
     quoteModal.hide();
     const summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
     summaryModal.show();
 }
 
-// Function to Go Back to Edit the Form
+
 function editForm() {
     const summaryModal = bootstrap.Modal.getInstance(document.getElementById('summaryModal'));
     summaryModal.hide();
@@ -66,13 +65,13 @@ function editForm() {
     quoteModal.show();
 }
 
-// Function to Send Email with Form Data via mailto
+
 function sendEmail() {
     const mailtoLink = `mailto:admin@ultraclean.co.nz?subject=Free Quote Inquiry&body=First Name: ${document.getElementById('firstName').value}%0D%0ALast Name: ${document.getElementById('lastName').value}%0D%0AEmail: ${document.getElementById('email').value}%0D%0APhone: ${document.getElementById('phone').value}%0D%0ACity: ${document.getElementById('city').value}%0D%0ACleaning Service: ${document.getElementById('service').value}%0D%0AUrgency: ${document.querySelector('input[name="urgency"]:checked').value}`;
     window.location.href = mailtoLink;
 }
 
-// Cancel Button to Close the Modal
+
 function cancelForm() {
     const quoteModal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
     if (quoteModal) quoteModal.hide();
@@ -94,3 +93,11 @@ document.getElementById('galleryDropdown').addEventListener('click', function (e
         window.location.href = 'gallery.html';
     }
 });
+
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+    }, 3000); // Wait for 3 seconds
+});
+
